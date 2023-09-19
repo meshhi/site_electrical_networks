@@ -36,3 +36,101 @@
     transform: rotate(360deg);
   }
 }
+
+.main_content {
+  height: 100vh;
+  background-color: #fb9961bd;
+}
+
+.carousel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.carousel_content__left {
+  transition: top 0.5s;
+  position: relative;
+  height: 100%;
+  background-color: #92fb61bd;
+}
+
+.carousel_content__right {
+  transition: top 0.5s;
+  position: relative;
+  height: 100%;
+  background-color: #61fba1bd;
+}
+
+.carousel_item {
+  height: 100vh;
+}
+
+.carousel_item__left_1 {
+  background-color: #9bc5adbd;
+}
+
+.carousel_item__left_2 {
+  background-color: #b1bd13bd;
+}
+
+.carousel_item__left_2 {
+  background-color: #42c1e0bd;
+}
+
+.carousel_item__right_1 {
+  background-color: #ca5133bd;
+}
+
+.carousel_item__right_2 {
+  background-color: #d127c3bd;
+}
+
+.carousel_item__right_2 {
+  background-color: #26d6a1bd;
+}
+
+.app_container {
+  position: absolute;
+  min-height: 100vh;
+  top: 0;
+  height: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: top 0.5s;
+}
+
+.app_container_inner {
+  position: relative;
+  transition: top 0.5s;
+}
+
+.main_window_container {
+  width: 100%;
+  height: 100vh;
+  background-color: yellow;
+}
+
+.main_window_header {
+  width: 100%;
+  height: 10%;
+  background-color: red;
+}
+
+.main_window_header__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+}
+
+.main_window_header__menu_item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
