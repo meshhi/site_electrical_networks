@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -110,11 +116,12 @@
   width: 100%;
   height: 100vh;
   background-color: yellow;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr;
 }
 
 .main_window_header {
-  width: 100%;
-  height: 10%;
   background-color: red;
 }
 
@@ -133,4 +140,22 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.main_window_header__menu_item:hover {
+  background-color: rgba(255, 255, 255, 0.377);
+  cursor: pointer;
+}
+
+.main_window_content {
+  position: relative;
+}
+
+.main_window_content__inner_container {
+  position: absolute;
+  top: 4%;
+  left: 2%;
+  right: 2%;
+  bottom: 4%;
+  background-color: green;
 }
