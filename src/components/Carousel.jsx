@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 export default ({changeOffset}) => {
     const [offset, setOffset] = useState(0);
@@ -7,6 +8,11 @@ export default ({changeOffset}) => {
         changeOffset('0vh')
       }
 
+    useEffect(() => {
+        let customoffset = 100 * document.querySelector('.carousel_content__left').children.length;
+        customoffset -= 100;
+        document.querySelector('.carousel_content__left').style.top = `-${customoffset}vh`
+    }, [])
     return(
         <div className='container carousel' 
         onWheel={windowScroll}
@@ -18,7 +24,7 @@ export default ({changeOffset}) => {
                 return prev + 100
               }
             });
-            document.querySelector('.carousel_content__left').style.top = `${offset}vh`;
+            document.querySelector('.carousel_content__left').style.top = `-${(100 * document.querySelector('.carousel_content__left').children.length)-offset - 100}vh`;
             document.querySelector('.carousel_content__right').style.top = `-${offset}vh`;
           }}>
             <div className='carousel_content__left'>
@@ -38,7 +44,6 @@ export default ({changeOffset}) => {
             
               </div>
               <div className='carousel_item carousel_item__left_3'>
-            
             </div>
             </div>
             <div className='carousel_content__right'>

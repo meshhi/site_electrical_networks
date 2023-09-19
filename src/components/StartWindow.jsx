@@ -6,6 +6,8 @@ export default ({changeOffset}) => {
       changeOffset(val)
     }
 
+
+
     return(
     <div className='main_window_container' onWheel={(e) => windowScroll(e, '-100vh')}>
       <header className="main_window_header">
