@@ -20,7 +20,8 @@ export default ({changeOffset}) => {
       </header>
       <main className='main_window_content'>
         <div className='main_window_content__inner_container'>
-
+          <div></div>
+          <div></div>
         </div>
       </main>
       <footer className='main_window_footer'>
